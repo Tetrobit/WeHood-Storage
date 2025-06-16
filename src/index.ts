@@ -32,7 +32,7 @@ const storage = multer.diskStorage({
 
 // Фильтр файлов
 const fileFilter = (req: Express.Request, file: Express.Multer.File, cb: multer.FileFilterCallback) => {
-  const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'video/mp4', 'video/quicktime'];
+  const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'video/mp4', 'video/quicktime', 'audio/wave'];
   if (allowedTypes.includes(file.mimetype)) {
     cb(null, true);
   } else {
